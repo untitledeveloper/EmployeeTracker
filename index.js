@@ -3,6 +3,7 @@ const table = require("console.table");
 const viewDepartments = require("./tools/viewDepartments");
 const viewRoles = require("./tools/viewRoles");
 const viewEmployees = require("./tools/viewEmployees");
+const addDepartments = require("./tools/addDepartments");
 
 function input(){
     return inquirer.prompt([
@@ -38,12 +39,7 @@ async function init() {
         }
 
         else if (test.home == "Add a department") {
-            console.log("Add a department ~ section")
-
-            function addDepartment() {
-
-            }
-            addDepartment()
+            addDepartments()
         }
 
         else if (test.home == "Add a role") {

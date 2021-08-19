@@ -1,12 +1,7 @@
 const mysql = require('mysql2');
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    user: 'teoman',
-    password: 'password',
-    database: 'employeeTracker_db'
-  }
-);
+const dbConfig = require("./db/dbConfig");
+const db = mysql.createConnection(dbConfig());
+
 
 function viewRoles() {
     console.log("Currently in viewRoles.js");

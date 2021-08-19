@@ -19,10 +19,6 @@ CREATE TABLE employees (
 );
 INSERT INTO departments (id, name)
     VALUES (1, "TestDepartment");
-INSERT INTO departments (id, name)
-    VALUES (2, "TestDepartment2");
-INSERT INTO departments (id, name)
-    VALUES (3, "TestDepartment3");
 INSERT INTO roles (id, name)
     VALUES (1, "TestRole");
 INSERT INTO employees (id, first_name, last_name)

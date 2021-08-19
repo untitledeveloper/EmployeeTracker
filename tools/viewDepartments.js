@@ -1,12 +1,7 @@
 const mysql = require('mysql2');
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    user: 'teoman',
-    password: 'password',
-    database: 'employeeTracker_db'
-  }
-);
+const dbConfig = require("./db/dbConfig");
+const db = mysql.createConnection(dbConfig());
+
 
 function viewDepartments() {
     console.log("Currently in viewDepartments.js");
@@ -18,11 +13,6 @@ function viewDepartments() {
     });
     
     function tableCreate(x) {
-      // var table = []
-      // table.push({
-      //   id: x["id"],
-      //   name: x["name"],
-      // })
       console.table(x)
     }
 

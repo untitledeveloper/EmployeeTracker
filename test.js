@@ -1,36 +1,55 @@
 const mysql = require('mysql2');
 const table = require("console.table");
+const inquirer = require('inquirer');
+const dbConfig = require("./db/dbConfig");
+const db = mysql.createConnection(dbConfig());
 
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    user: 'teoman',
-    password: 'password',
-    database: 'employeeTracker_db'
-  }
-);
+// function input() {
+//   return inquirer.prompt([
+//       {
+//           type: "input",
+//           name: "name",
+//           message: "Name of new department? "
+          
+//       }
+//   ])
+// }
 
-var newInsert = {id: 4, name: "TestDepartment4"};
+// async function init() {
+//   try {
+//       const test = await input();
+//       return console.log(test.name);
+//   }
 
-db.query("INSERT INTO departments SET ?", newInsert, (err, result) => {
-});
+//   catch(err) {
+//       console.log(err);
+//   }
+// }
 
-// var test = []
+// init()
 
-// db.query('SELECT * FROM departments', function (err, results) {
-//   results.forEach(results => {
-//     tableB(results)
-//   });
+
+// var newInsert = {id: 4, name: "TestDepartment4"};
+
+// db.query("INSERT INTO departments SET ?", newInsert, (err, result) => {
 // });
 
-// function tableB(x) {
-//   // var table = []
-//   // table.push({
-//   //   id: x["id"],
-//   //   name: x["name"],
-//   // })
-//   console.table(x)
-// }
+var test = []
+
+db.query('SELECT * FROM departments', function (err, results) {
+  results.forEach(results => {
+    tableB(results)
+  });
+});
+
+function tableB(x) {
+  // var table = []
+  // table.push({
+  //   id: x["id"],
+  //   name: x["name"],
+  // })
+  console.table(x)
+}
 
 // var someVar = [];
 
