@@ -1,7 +1,8 @@
 const inquirer = require("inquirer");
 const table = require("console.table");
 const viewDepartments = require("./tools/viewDepartments");
-
+const viewRoles = require("./tools/viewRoles");
+const viewEmployees = require("./tools/viewEmployees");
 
 function input(){
     return inquirer.prompt([
@@ -23,29 +24,16 @@ function input(){
 
 async function init() {
     try {
-        const test = "View all departments";
-        // await input();
+        const test = await input();
         if (test.home == "View all departments") {
-            console.log("View all departments ~ section")
-
             viewDepartments()
         }
 
         else if (test.home == "View all roles") {
-            console.log("View all roles ~ section")
-
-            function viewRoles() {
-
-            }
             viewRoles()
         }
 
         else if (test.home == "View all employees") {
-            console.log("View all employees ~ section")
-
-            function viewEmployees() {
-
-            }
             viewEmployees()
         }
 
@@ -94,4 +82,4 @@ async function init() {
     }
   }
 
-  init();  
+  init();
