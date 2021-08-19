@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.1.2"
+    "console.table": "^0.10.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^8.1.2",
+    "mysql2": "^2.3.0",
+    "sqlite3": "^5.0.2"
   }
 }

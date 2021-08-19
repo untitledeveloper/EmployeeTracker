@@ -1,4 +1,7 @@
 const inquirer = require("inquirer");
+const table = require("console.table");
+const viewDepartments = require("./tools/viewDepartments");
+
 
 function input(){
     return inquirer.prompt([
@@ -20,68 +23,66 @@ function input(){
 
 async function init() {
     try {
-        const test = await input();
+        const test = "View all departments";
+        // await input();
         if (test.home == "View all departments") {
             console.log("View all departments ~ section")
 
-            function vadChoice() {
-
-            }
-            vadChoice()
+            viewDepartments()
         }
 
         else if (test.home == "View all roles") {
             console.log("View all roles ~ section")
 
-            function varChoice() {
+            function viewRoles() {
 
             }
-            varChoice()
+            viewRoles()
         }
 
         else if (test.home == "View all employees") {
             console.log("View all employees ~ section")
 
-            function valChoice() {
+            function viewEmployees() {
 
             }
-            valChoice()
+            viewEmployees()
         }
 
         else if (test.home == "Add a department") {
             console.log("Add a department ~ section")
 
-            function aadChoice() {
+            function addDepartment() {
 
             }
-            aadChoice()
+            addDepartment()
         }
 
         else if (test.home == "Add a role") {
             console.log("Add a role ~ section")
 
-            function aarChoice() {
+            function addRole() {
 
             }
-            aarChoice()
+            addRole()
         }
 
         else if (test.home == "Add an employee") {
             console.log("Add an employee ~ section")
 
-            function aaeChoice() {
+            function addEmployee() {
 
             }
-            aaeChoice()
+            addEmployee()
         }
 
         else if (test.home == "Update an employee role") {
             console.log("Update an employee role ~ section")
 
-            function uaerChoice() {
+            function updateEmployeeRole() {
 
             }
-            uaerChoice()
+            updateEmployeeRole()
         }
 
         else {
