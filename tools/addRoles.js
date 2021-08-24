@@ -1,6 +1,6 @@
 const mysql = require("mysql2");
 const inquirer = require("inquirer");
-const table = require("console.table");
+const table = require("console.table")
 const uid = require("../tools/uid");
 const dbConfig = require("../db/dbConfig");
 const db = mysql.createConnection(dbConfig());
@@ -11,24 +11,24 @@ function input() {
         {
             type: "input",
             name: "name",
-            message: "Name of new department? "
+            message: "Name of new role? "
             
         }
     ])
   }
   
-  async function addDepartments() {
+  async function addRoles() {
     try {
         const test = await input();
 
-        var id = uid();
+        var id = uid()
         var newInsert = {id: id, name: test.name};
 
-        db.query("INSERT INTO departments SET ?", newInsert, (err, result) => {});
+        db.query("INSERT INTO roles SET ?", newInsert, (err, result) => {});
 
-        console.log("Added", "'"+test.name+"'","to list of departments");
+        console.log("Added", "'"+test.name+"'","to list of roles");
 
-        db.query('SELECT * FROM departments', function (err, results) {
+        db.query('SELECT * FROM roles', function (err, results) {
             results.forEach(results => {
               tableCreate(results)
             });
@@ -46,4 +46,4 @@ function input() {
     }
   }
 
-module.exports = addDepartments;
+module.exports = addRoles;

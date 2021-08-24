@@ -4,6 +4,8 @@ const viewDepartments = require("./tools/viewDepartments");
 const viewRoles = require("./tools/viewRoles");
 const viewEmployees = require("./tools/viewEmployees");
 const addDepartments = require("./tools/addDepartments");
+const addRoles = require("./tools/addRoles");
+const addEmployees = require("./tools/addEmployees");
 
 function input(){
     return inquirer.prompt([
@@ -43,21 +45,11 @@ async function init() {
         }
 
         else if (test.home == "Add a role") {
-            console.log("Add a role ~ section")
-
-            function addRole() {
-
-            }
-            addRole()
+            addRoles()
         }
 
         else if (test.home == "Add an employee") {
-            console.log("Add an employee ~ section")
-
-            function addEmployee() {
-
-            }
-            addEmployee()
+            addEmployees()
         }
 
         else if (test.home == "Update an employee role") {
