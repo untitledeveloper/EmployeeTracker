@@ -33,3 +33,5 @@ INSERT INTO roles (id, name)
     VALUES ("feda", "Technician");
 INSERT INTO employees (id, first_name, last_name, role, department)
     VALUES ("4ac5", "Bob", "Lowe", "Intern", "Database");
+INSERT INTO employees (id, first_name, last_name, role, department)
+    VALUES ("6b23", "Dan", "Lowe", "Manager", "AI");

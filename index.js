@@ -6,6 +6,7 @@ const viewEmployees = require("./tools/viewEmployees");
 const addDepartments = require("./tools/addDepartments");
 const addRoles = require("./tools/addRoles");
 const addEmployees = require("./tools/addEmployees");
+const updateEmployeeRole = require("./tools/updateEmployeeRole");
 
 function input(){
     return inquirer.prompt([
@@ -53,11 +54,6 @@ async function init() {
         }
 
         else if (test.home == "Update an employee role") {
-            console.log("Update an employee role ~ section")
-
-            function updateEmployeeRole() {
-
-            }
             updateEmployeeRole()
         }
 
